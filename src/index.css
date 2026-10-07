@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans bg-white text-navy antialiased;
+    line-height: 1.5;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gold-text {
+    @apply bg-gold-gradient bg-clip-text text-transparent;
+  }
+  .diamond-pattern {
+    background-image:
+      linear-gradient(45deg, transparent 48%, rgba(244,180,0,0.03) 49%, rgba(244,180,0,0.03) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, rgba(244,180,0,0.03) 49%, rgba(244,180,0,0.03) 51%, transparent 52%);
+    background-size: 30px 30px;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
