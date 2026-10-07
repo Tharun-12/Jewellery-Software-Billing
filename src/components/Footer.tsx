@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-heading font-extrabold text-lg">
-                  iiQ<span className="text-crimson">Bets</span>
+                  iiiQ<span className="text-crimson">Bets</span>
                 </span>
                 <p className="text-[10px] text-navy-200">{company.tagline}</p>
               </div>
