@@ -464,6 +464,7 @@
 
 import { useState, useEffect, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {BASE_URL} from '@/apiurl/apiurl';
 import {
   Phone, Mail, Globe, MapPin, Building2, Send,
   CheckCircle2, AlertCircle, Loader2, X,
@@ -472,7 +473,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { company, businessTypes } from '@/data/content';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+const API_URL = BASE_URL;
 
 type FormState = {
   name: string;
