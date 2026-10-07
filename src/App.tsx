@@ -9,6 +9,7 @@ import CTA from '@/components/CTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import TermsAndConditions from './components/Terms&conditions';
 
 function App() {
   return (
