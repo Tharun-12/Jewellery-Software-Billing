@@ -15,17 +15,45 @@ export const company = {
   phoneRaw: '919448113616',
   email: 'contact@iiqbets.com',
   website: 'https://www.iiqbets.com/',
-  address: 'Skyline Beverly Park # D 402, Amruthahalli Main Road, Amruthahalli, Bangalore - 560092',
+  address:
+    'Skyline Beverly Park # D 402, Amruthahalli Main Road, Amruthahalli, Bangalore - 560092',
   copyright: '© 2026 iiQBets – Krika MKB Corporation Pvt Ltd',
 };
 
-export const navLinks = [
-  { label: 'Features', href: '#features' },
-  { label: 'Why Choose Us', href: '#why-choose' },
-  { label: 'Ideal For', href: '#ideal-for' },
-  { label: 'Benefits', href: '#benefits' },
-  { label: 'Contact', href: '#contact' },
+export type NavLink = {
+  label: string;
+  path: string;
+  href: string; // kept for legacy references (e.g. active-section detection)
+  sectionId: string;
+};
+
+export const navLinks: NavLink[] = [
+  { label: 'Features', path: '/features', href: '#features', sectionId: 'features' },
+  { label: 'Why Choose Us', path: '/why-choose', href: '#why-choose', sectionId: 'why-choose' },
+  { label: 'Ideal For', path: '/ideal-for', href: '#ideal-for', sectionId: 'ideal-for' },
+  { label: 'Benefits', path: '/benefits', href: '#benefits', sectionId: 'benefits' },
+  { label: 'Contact', path: '/contact', href: '#contact', sectionId: 'contact' },
 ];
+
+export type FooterLink = {
+  label: string;
+  path: string;
+  sectionId: string;
+};
+
+export const footerLinks: Record<string, FooterLink[]> = {
+  Company: [
+    { label: 'Features', path: '/features', sectionId: 'features' },
+    { label: 'Why Choose Us', path: '/why-choose', sectionId: 'why-choose' },
+    { label: 'Ideal For', path: '/ideal-for', sectionId: 'ideal-for' },
+    { label: 'Benefits', path: '/benefits', sectionId: 'benefits' },
+    { label: 'Contact', path: '/contact', sectionId: 'contact' },
+  ],
+  Support: [
+    { label: 'Request a Demo', path: '/contact', sectionId: 'request-demo-form' },
+    { label: 'Contact Us', path: '/contact', sectionId: 'contact' },
+  ],
+};
 
 export const heroStats = [
   { label: 'Total Customers', value: '1,250', icon: Users, color: 'text-accent-blue' },
