@@ -35,14 +35,53 @@
 
 
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ERP from '@/pages/ERP';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import TermsOfService from './components/Terms&conditions';
+
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import ERP from '@/pages/ERP';
+// import PrivacyPolicy from './components/PrivacyPolicy';
+// import TermsOfService from './components/Terms&conditions';
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<ERP />} />
+//         <Route path="/home" element={<ERP />} />
+//         <Route path="/features" element={<ERP />} />
+//         <Route path="/why-choose" element={<ERP />} />
+//         <Route path="/ideal-for" element={<ERP />} />
+//         <Route path="/benefits" element={<ERP />} />
+//         <Route path="/contact" element={<ERP />} />
+//         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+//         <Route path="/terms-of-service" element={<TermsOfService />} />
+//         <Route path="/terms-and-conditions" element={<TermsOfService />} />
+//         <Route path="*" element={<ERP />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import ERP from "@/pages/ERP";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsOfService from "./components/Terms&conditions";
+import usePageTracking from "./components/usePageTracking";
+
+function PageTracking() {
+  usePageTracking();
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
+      {/* Facebook Pixel page tracking */}
+      <PageTracking />
+
       <Routes>
         <Route path="/" element={<ERP />} />
         <Route path="/home" element={<ERP />} />
@@ -51,9 +90,23 @@ function App() {
         <Route path="/ideal-for" element={<ERP />} />
         <Route path="/benefits" element={<ERP />} />
         <Route path="/contact" element={<ERP />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/terms-and-conditions" element={<TermsOfService />} />
+
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+
+        <Route
+          path="/terms-of-service"
+          element={<TermsOfService />}
+        />
+
+        <Route
+          path="/terms-and-conditions"
+          element={<TermsOfService />}
+        />
+
+        {/* Fallback */}
         <Route path="*" element={<ERP />} />
       </Routes>
     </BrowserRouter>
