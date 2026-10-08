@@ -14,7 +14,7 @@ export const company = {
   phone: '+91 94481 13616',
   phoneRaw: '919448113616',
   email: 'contact@iiqbets.com',
-  website: 'https://www.iiqbets.com/',
+  website: 'https://www.iiiqbets.com/',
   address:
     'Skyline Beverly Park # D 402, Amruthahalli Main Road, Amruthahalli, Bangalore - 560092',
   copyright: '© 2026 iiQBets – Krika MKB Corporation Pvt Ltd',
